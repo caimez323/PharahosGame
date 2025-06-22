@@ -28,9 +28,6 @@ SMODS.Joker {
 			return {
 				message = '+' .. card.ability.extra.chips .. ' Chips',
 				colour = G.C.CHIPS,
-				-- The return value, "card", is set to the variable "card", which is the joker.
-				-- Basically, this tells the return value what it's affecting, which if it's the joker itself, it's usually card.
-				-- It can be things like card = context.other_card in some cases, so specifying card (return value) = card (variable from function) is required.
 				card = card
 			}
 		end
