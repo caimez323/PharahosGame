@@ -23,7 +23,7 @@ SMODS.Joker {
 				message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chips } }
 			}
 		end
-		if context.after and not context.blueprint then
+		if context.before and not context.blueprint then
 			card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain*#G.hand.cards
 			return {
 				message = '+' .. card.ability.extra.chips .. ' Chips',
