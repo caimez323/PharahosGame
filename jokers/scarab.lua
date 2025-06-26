@@ -1,9 +1,9 @@
 SMODS.Joker {
 	name = "Scarab Card",
 	key = 'Scarab',
-	config = { extra = { pyrox = 1, increase = 1 } },
+	config = { extra = { scarab = 1, increase = 1 } },
 	loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.pyrox, card.ability.extra.increase } }
+		return { vars = { card.ability.extra.scarab, card.ability.extra.increase } }
 	end,
 	rarity = 1,
 	atlas = "Jokers",
@@ -13,9 +13,9 @@ SMODS.Joker {
 	demicoloncompat = true,
 	calculate = function(self, card, context)
 		if (context.end_of_round and context.game_over == false and not context.repetition) or context.forcetrigger then
-				ease_pyrox(card.ability.extra.pyrox)
+				ease_scarab(card.ability.extra.scarab)
 				return {
-					message = "+" .. card.ability.extra.pyrox .. "¤",
+					message = "+" .. card.ability.extra.scarab .. "¤",
 					colour = G.C.BLUE,
 				}
 		end

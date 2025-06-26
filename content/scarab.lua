@@ -1,11 +1,11 @@
 local old_igo = Game.init_game_object
 function Game:init_game_object()
 	local ret = old_igo(self)
-	ret.payasaka_pyroxenes = 0
+	ret.pharahos_scarabs = 0
 	return ret
 end
 
-function ease_pyrox(mod, instant)
+function ease_scarab(mod, instant)
 	if mod == 0 then return end
 	local function _mod(mod)
 		local dollar_UI = G.HUD:get_UIE_by_ID('scarab_text_UI')
@@ -17,7 +17,7 @@ function ease_pyrox(mod, instant)
 			col = G.C.RED
 		end
 		--Ease from current chips to the new number of chips
-		G.GAME.payasaka_pyroxenes = G.GAME.payasaka_pyroxenes + mod
+		G.GAME.pharahos_scarabs = G.GAME.pharahos_scarabs + mod
 		dollar_UI.config.object:update()
 		G.HUD:recalculate()
 		--Popup text next to the chips in UI showing number of chips gained/lost
@@ -45,26 +45,26 @@ function ease_pyrox(mod, instant)
 	end
 end
 
-function add_pyrox(amount)
+function add_scarab(amount)
     if amount > 0 then
-        ease_pyrox(amount)
+        ease_scarab(amount)
     end
 end
 
--- Fonction pour enlever des pyroxènes
-function remove_pyrox(amount)
-    if amount > 0 and G.GAME.payasaka_pyroxenes >= amount then
-        ease_pyrox(-amount)
+-- Fonction pour enlever des scarabs
+function remove_scarab(amount)
+    if amount > 0 and G.GAME.pharahos_scarabs >= amount then
+        ease_scarab(-amount)
         return true -- Succès
     end
-    return false -- Échec (pas assez de pyroxènes)
+    return false -- Échec (pas assez de scarabs)
 end
 
 -- Fonction pour définir directement le montant
-function set_pyrox(amount)
-    local current = G.GAME.payasaka_pyroxenes
+function set_scarab(amount)
+    local current = G.GAME.pharahos_scarabs
     local diff = amount - current
     if diff ~= 0 then
-        ease_pyrox(diff, true) -- Instantané
+        ease_scarab(diff, true) -- Instantané
     end
 end
