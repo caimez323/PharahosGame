@@ -10,3 +10,5 @@ SMODS.load_file(path .. "Jokers.lua")()
 
 -- Enhancements
 SMODS.load_file(path .. "Enhancements.lua")()
+
+SMODS.load_file("content/pyrox.lua")()
