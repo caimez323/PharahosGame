@@ -11,4 +11,5 @@ SMODS.load_file(path .. "Jokers.lua")()
 -- Enhancements
 SMODS.load_file(path .. "Enhancements.lua")()
 
+-- New counters
 SMODS.load_file("content/scarab.lua")()

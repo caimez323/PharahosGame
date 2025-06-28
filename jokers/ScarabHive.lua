@@ -1,6 +1,8 @@
 SMODS.Joker {
-	name = "Scarab Card",
-	key = 'Scarab',
+	loc_txt= {
+		name = "Scarab Hive",
+	},
+	key = 'ScarabHive',
 	config = { extra = { scarab = 1, increase = 1 } },
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.scarab, card.ability.extra.increase } }
