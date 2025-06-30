@@ -1,8 +1,8 @@
 SMODS.Joker {
     loc_txt= {
-        name = "Iris",
+        name = "Ibis",
     },
-    key = "Iris",
+    key = "Ibis",
     atlas = "Jokers",
     pos = { x = 0, y = 0 },
     rarity = 1,
