@@ -7,13 +7,13 @@ SMODS.Joker {
 			"Gains {C:chips}+#1#{} Chips",
 		}
 	},
-	config = { extra = { chips = 0 } },
+	config = { extra = { chips = 25 } },
 	rarity = 2,
 	atlas = 'Jokers',
 	pos = { x = 0, y = 0 },
 	cost = 5,
 	loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.chips } }
+		return { vars = { card.ability.extra.chips * G.GAME.pharahos_scarabs } }
 	end,
 	calculate = function(self, card, context)
 		if context.joker_main then
