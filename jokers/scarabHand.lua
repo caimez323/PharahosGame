@@ -13,6 +13,11 @@ SMODS.Joker {
     end,
     remove_from_deck = function(self, card, from_debuff)
         G.hand:change_size(-card.ability.extra.h_size * G.GAME.pharahos_scarabs)
+    end,
+    calculate = function(self, card, context)
+        if (context.end_of_round and not context.individual and not context.repetition and not context.blueprint) or context.forcetrigger then
+            G.hand:change_size(card.ability.extra.h_size * G.GAME.pharahos_scarabs)
+        end
     end
 }
 
