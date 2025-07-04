@@ -1,6 +1,12 @@
 SMODS.Joker {
     key = "Pouf",
     blueprint_compat = false,
+    loc_txt = {
+        name = 'Pouf',
+        text = {
+            "-1"
+        }
+    },
     rarity = 2,
     cost = 4,
     atlas = "Jokers",
