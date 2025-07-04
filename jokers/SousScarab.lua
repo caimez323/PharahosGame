@@ -24,6 +24,7 @@ SMODS.Joker {
         local bonus = card.ability.extra.dollar
         if G.GAME.pharahos_scarabs >= 1 then
                 gain = gain + card.ability.extra.dollar_gain
+                remove_scarab(1)
         end
         return bonus
     end
